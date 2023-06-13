@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.mathalarm.presentation.ui.main.AlarmItemViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/alarm_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.ui.main.AlarmItemFragment">
+
+        <EditText
+            android:id="@+id/et_alarm_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="name"
+            android:ems="10"
+            android:hint="@string/alarm_name_hint"
+            android:inputType="text"
+            android:text="@{viewModel.alarmItem.name}"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TimePicker
+            android:id="@+id/time_picker_alarm"
+            style="@style/time_picker"
+            set_time_picker_time="@{viewModel.alarmItem.time}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:headerBackground="@color/primary_linear"
+            android:numbersBackgroundColor="@color/white"
+            android:numbersSelectorColor="@color/primary_linear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_alarm_name" />
+
+        <LinearLayout
+            android:id="@+id/ll_repeat_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/bt_save_alarm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time_picker_alarm">
+
+            <ToggleButton
+                android:id="@+id/tb_monday"
+                style="@style/day_toggle_button"
+                tb_monday="@{viewModel.alarmItem.daysOfWeek}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:textOff="@string/monday"
+                android:textOn="@string/monday" />
+
+            <ToggleButton
+                android:id="@+id/tb_tuesday"
+                style="@style/day_toggle_button"
+                tb_tuesday="@{viewModel.alarmItem.daysOfWeek}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:textOff="@string/tuesday"
+                android:textOn="@string/tuesday" />
+
+            <ToggleButton
+                android:id="@+id/tb_wednesday"
+                style="@style/day_toggle_button"
+                tb_wednesday="@{viewModel.alarmItem.daysOfWeek}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:textOff="@string/wednesday"
+                android:textOn="@string/wednesday" />
+
+            <ToggleButton
+                android:id="@+id/tb_thursday"
+                style="@style/day_toggle_button"
+                tb_thursday="@{viewModel.alarmItem.daysOfWeek}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:textOff="@string/thursday"
+                android:textOn="@string/thursday" />
+
+            <ToggleButton
+                android:id="@+id/tb_friday"
+                style="@style/day_toggle_button"
+                tb_friday="@{viewModel.alarmItem.daysOfWeek}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:textOff="@string/friday"
+                android:textOn="@string/friday" />
+
+            <ToggleButton
+                android:id="@+id/tb_saturday"
+                style="@style/day_toggle_button"
+                tb_saturday="@{viewModel.alarmItem.daysOfWeek}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:textOff="@string/saturday"
+                android:textOn="@string/saturday" />
+
+            <ToggleButton
+                android:id="@+id/tb_sunday"
+                style="@style/day_toggle_button"
+                tb_sunday="@{viewModel.alarmItem.daysOfWeek}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:textOff="@string/sunday"
+                android:textOn="@string/sunday" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/bt_save_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

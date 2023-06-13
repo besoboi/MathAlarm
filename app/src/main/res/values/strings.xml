@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">MathAlarm</string>
+    <string name="app_name">Math Alarm</string>
+    <string name="alarm_card_description">Alarm card</string>
+    <string name="add_alarm_button">Add alarm</string>
+    <string name="alarm_name_hint">Alarm Name:</string>
+    <string name="save">SAVE</string>
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thr</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
+    <string name="question_mark">\?</string>
 </resources>
