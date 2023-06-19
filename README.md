@@ -12,7 +12,7 @@
       <img src="https://github.com/besoboi/MathAlarm/blob/master/alarm_gifs/alarm_work.gif">  <img src="https://github.com/besoboi/MathAlarm/blob/master/alarm_gifs/alarm_deleting.gif">
 </p>
 
-Приложение-будильник, в котором для отключения сигнала необходимо решить пример.
+Приложение-будильник, в котором для отключения сигнала необходимо решить математический пример.
 
 ### Создано с помощью
 
